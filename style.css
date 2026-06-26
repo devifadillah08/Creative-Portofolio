@@ -1,0 +1,463 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    color:#13153b;
+}
+
+/* ================= BACKGROUND ================= */
+
+.hero,
+.section{
+    width:100%;
+    min-height:100vh;
+    position:relative;
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle at 40% 25%,rgba(255,255,255,.55),transparent 40%),
+    linear-gradient(135deg,#f7ecd8 0%,#f7bfd7 55%,#7f8dff 100%);
+}
+
+/* ================= NAVBAR ================= */
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 70px;
+    z-index:1000;
+    transition:.4s;
+}
+
+header.scrolled{
+    background:rgba(255,255,255,.25);
+    backdrop-filter:blur(15px);
+}
+
+.logo{
+    font-size:34px;
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+}
+
+nav{
+    display:flex;
+    gap:35px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#13153b;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#735cff;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero-box{
+
+    border:3px solid #785CFF;
+    padding:50px 120px;
+    text-align:center;
+}
+
+.hero h1{
+
+    font-size:90px;
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-weight:500;
+
+}
+
+.hero h3{
+
+    margin-top:10px;
+    letter-spacing:8px;
+    font-size:25px;
+    font-weight:400;
+
+}
+
+/* ================= SECTION ================= */
+
+.section{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:120px;
+
+}
+
+.content{
+
+    max-width:700px;
+
+}
+
+.content h2{
+
+    font-size:52px;
+    margin-bottom:35px;
+    letter-spacing:5px;
+
+}
+
+.content p{
+
+    margin-bottom:30px;
+    line-height:1.8;
+    letter-spacing:2px;
+
+}
+
+.section h5{
+
+    position:absolute;
+    top:35px;
+    left:45px;
+    font-size:32px;
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-weight:500;
+
+}
+
+.section small{
+
+    position:absolute;
+    bottom:40px;
+    right:50px;
+    letter-spacing:3px;
+    font-size:16px;
+
+}
+
+/* ================= VISI MISI ================= */
+
+.visi-wrapper{
+
+    display:flex;
+    justify-content:center;
+    gap:120px;
+    width:100%;
+
+}
+
+.card{
+
+    width:420px;
+    text-align:center;
+
+}
+
+.card h2{
+
+    font-size:52px;
+    margin-bottom:30px;
+    letter-spacing:4px;
+
+}
+
+.card p{
+
+    line-height:1.9;
+    letter-spacing:2px;
+
+}
+
+/* ================= PENDIDIKAN ================= */
+
+.edu{
+
+    margin-top:45px;
+
+}
+
+.edu h3{
+
+    font-size:35px;
+
+}
+
+.edu h4{
+
+    font-size:28px;
+    margin-bottom:10px;
+    font-weight:500;
+
+}
+
+.edu p{
+
+    font-size:17px;
+
+}
+
+/* ================= ORNAMEN ================= */
+
+.shape{
+
+    position:absolute;
+    pointer-events:none;
+    animation:float 5s ease-in-out infinite;
+
+}
+
+.shape1{
+
+    width:190px;
+    top:20px;
+    left:20px;
+
+}
+
+.shape2{
+
+    width:120px;
+    top:100px;
+    right:180px;
+
+}
+
+.shape3{
+
+    width:120px;
+    left:170px;
+    bottom:100px;
+
+}
+
+.shape4{
+
+    width:240px;
+    right:-40px;
+    bottom:10px;
+
+}
+
+.kiri{
+
+    width:130px;
+    left:40px;
+    bottom:60px;
+}
+
+.kanan{
+
+    width:200px;
+    right:-30px;
+    top:20px;
+}
+
+.bawah{
+
+    width:160px;
+    bottom:-20px;
+    left:42%;
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-18px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+/* ================= SCROLL ANIMATION ================= */
+
+.content,
+.card,
+.hero-box{
+
+    opacity:0;
+    transform:translateY(60px);
+    transition:1s;
+
+}
+
+.show{
+
+    opacity:1;
+    transform:translateY(0);
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+header{
+
+padding:20px;
+
+}
+
+nav{
+
+display:none;
+
+}
+
+.hero h1{
+
+font-size:60px;
+
+}
+
+.hero-box{
+
+padding:40px;
+
+}
+
+.section{
+
+padding:60px 30px;
+
+}
+
+.content h2{
+
+font-size:40px;
+
+}
+
+.visi-wrapper{
+
+flex-direction:column;
+align-items:center;
+gap:60px;
+
+}
+
+.card{
+
+width:100%;
+
+}
+
+}
+
+
+
+.glass-card {
+    /* Warna latar belakang putih dengan transparansi 15% */
+    background: rgba(255, 255, 255, 0.15);
+    
+    /* Efek blur pada elemen di belakang kotak */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    
+    /* Border tipis agar batas kotak terlihat */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    
+    /* Bentuk dan jarak */
+    border-radius: 20px;
+    padding: 30px;
+    margin: 20px 0;
+    
+    /* Bayangan lembut agar kotak terlihat "mengambang" */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+    
+    /* Opsional: memastikan teks tetap terbaca */
+    color: #3b2821; 
+}
+
+
+/* ================= PENGALAMAN ================= */
+
+.job{
+    margin-top:45px;
+}
+
+.job h3{
+    font-size:34px;
+    font-weight:600;
+}
+
+.job h4{
+    font-size:24px;
+    font-weight:500;
+    margin:8px 0 15px;
+}
+
+.job p{
+    line-height:1.8;
+}
+
+
+/* ================= SKILL ================= */
+
+.skill .content{
+    width:700px;
+}
+
+.skill-item{
+    display:grid;
+    grid-template-columns:180px 1fr;
+    align-items:center;
+    margin:28px 0;
+    gap:25px;
+}
+
+.skill-item span{
+    font-size:22px;
+    font-weight:500;
+}
+
+.progress{
+    width:100%;
+    height:18px;
+    background:rgba(255,255,255,.55);
+    border-radius:50px;
+    overflow:hidden;
+}
+
+.progress-bar{
+    width:0;
+    height:100%;
+    background:#7b75ff;
+    border-radius:50px;
+    transition:2s ease;
+}
+
+
+/* ================= ANIMASI SKILL ================= */
+
+.progress.show .progress-bar{
+    width:inherit;
+}
